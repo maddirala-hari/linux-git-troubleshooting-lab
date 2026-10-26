@@ -1,39 +1,49 @@
-nnu@HariPrasad MINGW64 ~/OneDrive/Desktop/project1 (master)
-$ log
-bash: log: command not found
+# Git Commands Practice
 
-Kinnu@HariPrasad MINGW64 ~/OneDrive/Desktop/project1 (master)
-$ git status
-On branch master
-nothing to commit, working tree clean
+## 1. Check Repository Status
 
-Kinnu@HariPrasad MINGW64 ~/OneDrive/Desktop/project1 (master)
-$ git status
-On branch master
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-        bava.txt
+```bash
+git status
+```
 
-nothing added to commit but untracked files present (use "git add" to track)
+Shows modified, staged, and untracked files in the working tree.
 
-Kinnu@HariPrasad MINGW64 ~/OneDrive/Desktop/project1 (master)
-$ git add .
+## 2. View Commit History
 
-Kinnu@HariPrasad MINGW64 ~/OneDrive/Desktop/project1 (master)
-$ git commit -m 'new bava file'
-[master 0ec0f82] new bava file
- 1 file changed, 0 insertions(+), 0 deletions(-)
- create mode 100644 bava.txt
+```bash
+git log --oneline
+```
 
-Kinnu@HariPrasad MINGW64 ~/OneDrive/Desktop/project1 (master)
-$ git push origin master
-Enumerating objects: 3, done.
-Counting objects: 100% (3/3), done.
-Delta compression using up to 12 threads
-Compressing objects: 100% (2/2), done.
-Writing objects: 100% (2/2), 282 bytes | 282.00 KiB/s, done.
-Total 2 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
-To https://github.com/Hariprasad9355/project1.git
-   46b0026..0ec0f82  master -> master
+Displays previous commits in a concise format.
 
-Kinnu@HariPrasad MINGW64 ~/OneDrive/Desktop/project1 (master)
+## 3. Stage Changes
+
+```bash
+git add .
+```
+
+Stages changes for the next commit.
+
+## 4. Commit Changes
+
+```bash
+git commit -m "Update Git command practice notes"
+```
+
+Records staged changes in the repository history.
+
+## 5. Verify the Latest Commit
+
+```bash
+git log -1 --oneline
+```
+
+Displays the latest commit.
+
+## Troubleshooting
+
+**Issue:** `bash: log: command not found`
+
+**Cause:** `log` was entered as a standalone shell command.
+
+**Solution:** Run `git log --oneline` instead.
